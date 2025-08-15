@@ -33,7 +33,6 @@ read input
 let no_of_games++
 
 #check for integer
-
 if ! [[ $input =~ ^-?[0-9]+$ ]] 
 then 
 echo "That is not an integer, guess again:"
