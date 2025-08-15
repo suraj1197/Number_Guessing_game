@@ -25,7 +25,7 @@ fi
 no_of_games=$games_played
 
 #generating random number
-random_number=$(shuf -i 1-1000 -n 1)
+random_number=$(( RANDOM % 1000 + 1 ))
 
 #starting the game for the user
 echo "Guess the secret number between 1 and 1000:"
