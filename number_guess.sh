@@ -13,7 +13,7 @@ if [[ -z $Database ]]
 
 then #inserting username in database and getting the user_id to connect to the other table
     insert=$($PSQL "INSERT INTO users(username) VALUES('$input_username')")
-    insert_id=$($PSQL "SELECT user_id from users WHERE username = '$input_username'")
+    insert_id=$($QL "SELECT user_id from users WHERE username = '$input_username'")
     insert_user_id=$($PSQL "INSERT INTO user_info(user_id,games_played,best_score) VALUES($insert_id,0,0)")
     echo "Welcome, $input_username! It looks like this is your first time here."
 else
